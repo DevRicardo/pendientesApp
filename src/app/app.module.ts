@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
+import { ActividadesService } from '../services/actividades.service';
 
 
 
@@ -32,6 +33,7 @@ import { TerminadosComponent } from '../pages/terminados/terminados.component';
   providers: [
     StatusBar,
     SplashScreen,
+    ActividadesService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
