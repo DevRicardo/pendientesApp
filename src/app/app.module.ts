@@ -9,6 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { ActividadesService } from '../services/actividades.service';
+import { AgregarComponent } from '../pages/agregar/agregar.component';
 
 
 
@@ -17,7 +18,8 @@ import { ActividadesService } from '../services/actividades.service';
     MyApp,
     TabsPage,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { ActividadesService } from '../services/actividades.service';
     MyApp,
     TabsPage,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent,
   ],
   providers: [
     StatusBar,

@@ -1,7 +1,8 @@
 import { Component } from "@angular/core";
 import { ActividadesService } from "../../services/actividades.service";
-import { List } from "ionic-angular";
 import { Lista } from "../../models";
+import { NavController } from "ionic-angular";
+import { AgregarComponent } from "../agregar/agregar.component";
 
 @Component({
     selector: 'page-pendientes',
@@ -10,12 +11,19 @@ import { Lista } from "../../models";
 export class PendientesComponent {
 
    
-    constructor( private actividadesService: ActividadesService) {
+    constructor( 
+        private actividadesService: ActividadesService,
+        private navController: NavController
+        ) {
         
     }
 
     listaSelected(lista: Lista) {
         console.log(lista);
+    }
+
+    crearLista() {
+        this.navController.push(AgregarComponent);
     }
 
 }

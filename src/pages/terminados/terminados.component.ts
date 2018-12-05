@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { Lista } from "../../models";
 import { ActividadesService } from "../../services/actividades.service";
+import { Lista } from "../../models";
 
 @Component({
     selector: 'page-terminados',

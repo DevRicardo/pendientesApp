@@ -1,7 +1,7 @@
-<ion-header>
-    <ion-navbar color="primary">
-        <ion-title>Pendientes</ion-title>
-    </ion-navbar>
+    <ion-header>
+        <ion-navbar color="primary">
+            <ion-title>Pendientes</ion-title>
+        </ion-navbar>
     </ion-header>
 
     <ion-content>
@@ -11,4 +11,8 @@
               {{ item.titulo }}
             </button>  
           </ion-list>
+
+           <ion-fab right bottom (click)="crearLista()">
+                <button ion-fab><ion-icon name="add"></ion-icon></button>
+            </ion-fab>
     </ion-content>
