@@ -1,11 +1,17 @@
-<ion-header>
-        <ion-navbar>
-            <ion-title>Terminados</ion-title>
+    <ion-header>
+        <ion-navbar color="primary">
+            <ion-title>Completados</ion-title>
         </ion-navbar>
-        </ion-header>
+    </ion-header>
     
-        <ion-content padding>
-        <h2>Hola terminados</h2>
+    <ion-content>
+        <img src="../../assets/imgs/completados.jpg" alt="">
+
+        <ion-list>
+            <button ion-item *ngFor="let item of this.actividadesService.listas" (click)="listaSelected(item)">
+                {{ item.titulo }}
+            </button>  
+        </ion-list>
     
     </ion-content>
     
