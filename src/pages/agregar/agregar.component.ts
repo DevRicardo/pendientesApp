@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { ActividadesService } from "../../services/actividades.service";
+import { NavParams } from "ionic-angular";
+import { Lista } from "../../models";
 
 @Component({
     selector: 'page-agregar',
@@ -7,9 +9,15 @@ import { ActividadesService } from "../../services/actividades.service";
 })
 export class AgregarComponent {
 
-   
-    constructor( private actividadesService: ActividadesService) {
+   lista: Lista;
+
+    constructor( 
+        private actividadesService: ActividadesService,
+        private navParams: NavParams) {
         
+        const titulo = this.navParams.get('titulo');
+
+        this.lista = new Lista(titulo);
     }
 
 }
