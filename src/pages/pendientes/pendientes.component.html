@@ -7,7 +7,7 @@
     <ion-content>
         <img src="../../assets/imgs/pendientes.jpg">
         <ion-list>
-            <ion-item-sliding *ngFor="let item of actividadesService.listas" class="fadeInDown">
+            <ion-item-sliding *ngFor="let item of actividadesService.listas | filtroCompletado:false" class="fadeInDown">
                 <button ion-item (click)="listaSelected(item)">
                     {{ item.titulo }}
                     <ion-note item-end>

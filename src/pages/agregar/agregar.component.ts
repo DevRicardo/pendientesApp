@@ -47,6 +47,8 @@ export class AgregarComponent {
             return !itemData.completado;
         }).length;
 
+        console.log(pendientes);
+
         if ( pendientes === 0) {
             this.lista.terminada = true;
             this.lista.terminadaEn = new Date();

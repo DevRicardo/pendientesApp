@@ -10,6 +10,7 @@ import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { ActividadesService } from '../services/actividades.service';
 import { AgregarComponent } from '../pages/agregar/agregar.component';
+import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completado';
 
 
 
@@ -19,7 +20,8 @@ import { AgregarComponent } from '../pages/agregar/agregar.component';
     TabsPage,
     PendientesComponent,
     TerminadosComponent,
-    AgregarComponent
+    AgregarComponent,
+    FiltroCompletadoPipe
   ],
   imports: [
     BrowserModule,
