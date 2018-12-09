@@ -18,7 +18,13 @@ export class AgregarComponent {
         
         const titulo = this.navParams.get('titulo');
 
-        this.lista = new Lista(titulo);
+        if ( this.navParams.get('lista') ) {
+            this.lista = this.navParams.get('lista');
+        } else {
+            this.lista = new Lista(titulo);
+            this.actividadesService.agregarLista(this.lista);
+        }
+
     }
 
     agregarItem() {
@@ -29,16 +35,33 @@ export class AgregarComponent {
         const nuevoItem  = new ListaItem(this.nombreItem);
         this.lista.item.push(nuevoItem);
 
+        this.actividadesService.guardarStorage();
+
         this.nombreItem = '';
     }
 
     actualizarTarea(item: ListaItem) {
         item.completado = !item.completado;
+
+        const pendientes = this.lista.item.filter( itemData => {
+            return !itemData.completado;
+        }).length;
+
+        if ( pendientes === 0) {
+            this.lista.terminada = true;
+            this.lista.terminadaEn = new Date();
+        }else{
+            this.lista.terminada = false;
+            this.lista.terminadaEn = null;
+        }
+
+        this.actividadesService.guardarStorage();
     }
 
 
     borrar(index: number) {
         this.lista.item.splice(index, 1);
+        this.actividadesService.guardarStorage();
     }
 
 }

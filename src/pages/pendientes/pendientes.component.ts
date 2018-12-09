@@ -20,7 +20,10 @@ export class PendientesComponent {
     }
 
     listaSelected(lista: Lista) {
-       
+       this.navController.push(AgregarComponent, {
+          titulo: lista.titulo,
+          lista: lista
+        });
     }
 
     crearLista() {
@@ -49,6 +52,10 @@ export class PendientesComponent {
         });
 
         alerta.present();
+    }
+
+    borrarLista(lista: Lista) {
+        this.actividadesService.borrarLista(lista);
     }
 
 }
