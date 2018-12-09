@@ -36,4 +36,9 @@ export class AgregarComponent {
         item.completado = !item.completado;
     }
 
+
+    borrar(index: number) {
+        this.lista.item.splice(index, 1);
+    }
+
 }
