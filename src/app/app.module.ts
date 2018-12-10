@@ -11,6 +11,7 @@ import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { ActividadesService } from '../services/actividades.service';
 import { AgregarComponent } from '../pages/agregar/agregar.component';
 import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completado';
+import { ListaComponent } from '../components/lista/lista.component';
 
 
 
@@ -21,7 +22,8 @@ import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completa
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent,
-    FiltroCompletadoPipe
+    FiltroCompletadoPipe,
+    ListaComponent
   ],
   imports: [
     BrowserModule,

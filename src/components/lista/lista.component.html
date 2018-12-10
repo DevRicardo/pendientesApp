@@ -1,0 +1,15 @@
+<ion-list>
+    <ion-item-sliding *ngFor="let item of actividadesService.listas | filtroCompletado:completada" class="fadeInDown">
+        <button ion-item (click)="listaSelected(item)">
+            {{ item.titulo }}
+            <ion-note item-end>
+                {{ item.item.length }} items
+            </ion-note>
+        </button> 
+        <ion-item-options side="left">
+            <button (click)="borrarLista(item)" ion-button icon-only color="danger">
+                <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-item-options>
+    </ion-item-sliding> 
+</ion-list>
